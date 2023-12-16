@@ -157,7 +157,7 @@ function Form() {
           type="submit"
         >
           <img src="icon-arrow.svg" alt="submit" />
-          &#8709;
+          &nbsp;
         </button>
       </div>
     </form>
