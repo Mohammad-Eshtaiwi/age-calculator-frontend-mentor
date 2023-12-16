@@ -9,7 +9,8 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "postdeploy": "echo 'Deployed to GitHub Pages'"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -28,5 +29,5 @@
     "sass": "^1.69.5",
     "vite": "^5.0.0"
   },
-  "homepage": "https://mohammad-eshtaiwi.github.io/age-calculator-app"
+  "homepage": "https://mohammad-eshtaiwi.github.io/age-calculator-frontend-mentor"
 }
