@@ -18,6 +18,14 @@ body {
   font-size: fs(400);
   color: clr(neutral, 900);
   line-height: 1.5;
+  background-color: clr(neutral, 150);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#root {
 }
 
 ul {

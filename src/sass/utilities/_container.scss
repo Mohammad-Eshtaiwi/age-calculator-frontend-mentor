@@ -4,13 +4,16 @@
   --padding: #{$container-inline-padding} * 2;
   --max-width: #{$container-max-width};
 
-  @media screen and (max-width: 760px) {
-    --padding: 2.5rem * 2;
-  }
-
   width: min(100% - var(--padding), var(--max-width));
-  padding-block: $container-block-padding;
+  padding: $container-block-padding $container-inline-padding;
   margin-inline: auto;
+  background-color: clr(neutral, 100);
+  border-radius: 24px 24px 200px 24px;
+  @media screen and (max-width: 760px) {
+    --padding: 2.5rem;
+    padding: $container-block-padding 1.5rem;
+    border-radius: 24px 24px 100px 24px;
+  }
 }
 
 .container[data-type="wide"] {
