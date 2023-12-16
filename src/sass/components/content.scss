@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+.content {
+  p {
+    @include heading-l;
+  }
+  [data-value] {
+    color: clr(primary, 400);
+    letter-spacing: 2px;
+  }
+}

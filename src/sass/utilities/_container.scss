@@ -1,0 +1,18 @@
+@use "../abstracts/" as *;
+
+.container {
+  --padding: #{$container-inline-padding} * 2;
+  --max-width: #{$container-max-width};
+
+  @media screen and (max-width: 760px) {
+    --padding: 2.5rem * 2;
+  }
+
+  width: min(100% - var(--padding), var(--max-width));
+  padding-block: $container-block-padding;
+  margin-inline: auto;
+}
+
+.container[data-type="wide"] {
+  --max-width: #{$container-max-width-wide};
+}

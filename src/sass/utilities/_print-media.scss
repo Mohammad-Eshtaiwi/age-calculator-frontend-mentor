@@ -1,0 +1,17 @@
+// print
+
+.d-only-print {
+  display: none;
+  @media print {
+    display: unset !important;
+  }
+}
+
+@media print {
+  .d-print-none {
+    display: none;
+  }
+  .print-no-border {
+    border: 0;
+  }
+}

@@ -1,0 +1,29 @@
+@use "../abstracts/" as *;
+:root {
+  // size(8)
+  @each $name, $shades in $colors {
+    @each $shade, $color in $shades {
+      --#{$name}-#{$shade}: #{$color};
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $ff-base;
+  font-weight: $fw-400;
+  font-size: fs(400);
+  color: clr(neutral, 900);
+  line-height: 1.5;
+}
+
+ul {
+  padding-left: 0;
+}
+
+p {
+  margin-bottom: 0;
+}

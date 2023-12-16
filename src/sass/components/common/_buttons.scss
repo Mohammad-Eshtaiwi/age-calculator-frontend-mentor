@@ -1,0 +1,29 @@
+@use "../../abstracts" as *;
+
+.btn {
+  align-items: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  display: flex;
+  width: 96px;
+  height: 96px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+
+  &[data-type="primary"] {
+    color: #fff;
+    background-color: var(--primary, clr(primary, 400));
+
+    &:hover,
+    &:focus,
+    &:active {
+      // color: #fff;
+      background-color: clr(neutral, 900);
+    }
+  }
+}

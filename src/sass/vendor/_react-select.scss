@@ -1,0 +1,21 @@
+@use "../abstracts/" as *;
+
+.react-select {
+  &__control {
+    border: 1px solid var(--primary, clr(primary, 400)) !important;
+    &--is-focused {
+      box-shadow: 0 0 0 0.25rem rgb(50 88 65 / 25%) !important;
+    }
+  }
+  // react-select__option
+  &__option {
+    &--is-focused,
+    &--is-selected {
+      background-color: rgb(50 88 65 / 25%) !important;
+    }
+  }
+}
+
+[class^="react-select"] {
+  text-align: right !important;
+}

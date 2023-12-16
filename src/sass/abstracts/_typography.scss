@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+// font-family: "Poppins", sans-serif;
+$ff-sans: "Poppins", sans-serif;
+$ff-serif: "Abril Fatface", serif;
+
+$ff-base: $ff-sans;
+$ff-accent: $ff-serif;
+$font-sizes: (
+  900: clamp(2.5rem, 0.5rem + 10vw, 5rem),
+  800: clamp(2.25rem, 0.5rem + 7vw, 3.75rem),
+  700: 1.75rem,
+  600: clamp(1.4rem, 0.5rem + 3vw, 1.6875rem),
+  500: 1.3125rem,
+  400: 1.125rem,
+  300: 1rem,
+  200: 0.875rem,
+);
+
+$fw-400: 400;
+$fw-700: 700;
+
+// mixins
+@mixin heading-s {
+  font-family: $ff-base;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+}
+@mixin heading-m {
+  font-family: $ff-base;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.32px;
+  @media screen and (max-width: 760px) {
+    font-size: 1.25rem;
+  }
+}
+@mixin heading-l {
+  font-family: $ff-base;
+  font-size: 6.5rem;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 110%; /* 114.4px */
+  letter-spacing: -2.08px;
+  @media screen and (max-width: 760px) {
+    font-size: 3.5rem;
+  }
+}
+@mixin body {
+  font-family: $ff-base;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+// Heading S

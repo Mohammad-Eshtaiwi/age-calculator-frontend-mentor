@@ -1,0 +1,7 @@
+@use "../../abstracts" as *;
+.input {
+  padding: 12px 24px;
+  border-radius: 8px;
+
+  border: 1px solid clr(neutral, 200);
+}

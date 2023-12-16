@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+.form {
+  &-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    label {
+      @include heading-s;
+    }
+    input {
+      @include heading-m;
+      width: 100%;
+      @media screen and (max-width: 760px) {
+        padding-inline: 1rem;
+      }
+    }
+    &__container {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      @media screen and (max-width: 760px) {
+        font-size: 1rem;
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+    &-submit {
+      &__container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          background-color: clr(neutral, 200);
+          z-index: -1;
+        }
+        @media screen and (max-width: 760px) {
+          justify-content: center;
+          margin-block: 2rem;
+        }
+      }
+    }
+
+    &[data-type="error"] label {
+      color: clr(red, 400);
+    }
+    &[data-type="error"] p {
+      color: clr(red, 400);
+      font-size: 0.875rem;
+      @media screen and (max-width: 760px) {
+        font-size: 0.625rem;
+      }
+    }
+    &[data-type="error"] input,
+    &[data-type="error"] input:is(:focus, :active) {
+      border-color: clr(red, 400);
+    }
+  }
+}
